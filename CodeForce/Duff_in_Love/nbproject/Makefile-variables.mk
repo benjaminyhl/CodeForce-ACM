@@ -9,19 +9,19 @@ CND_DISTDIR=dist
 # Debug configuration
 CND_PLATFORM_Debug=GNU-MacOSX
 CND_ARTIFACT_DIR_Debug=dist/Debug/GNU-MacOSX
-CND_ARTIFACT_NAME_Debug=poweroftwo
-CND_ARTIFACT_PATH_Debug=dist/Debug/GNU-MacOSX/poweroftwo
+CND_ARTIFACT_NAME_Debug=duff_in_love
+CND_ARTIFACT_PATH_Debug=dist/Debug/GNU-MacOSX/duff_in_love
 CND_PACKAGE_DIR_Debug=dist/Debug/GNU-MacOSX/package
-CND_PACKAGE_NAME_Debug=poweroftwo.tar
-CND_PACKAGE_PATH_Debug=dist/Debug/GNU-MacOSX/package/poweroftwo.tar
+CND_PACKAGE_NAME_Debug=duffinlove.tar
+CND_PACKAGE_PATH_Debug=dist/Debug/GNU-MacOSX/package/duffinlove.tar
 # Release configuration
 CND_PLATFORM_Release=GNU-MacOSX
 CND_ARTIFACT_DIR_Release=dist/Release/GNU-MacOSX
-CND_ARTIFACT_NAME_Release=poweroftwo
-CND_ARTIFACT_PATH_Release=dist/Release/GNU-MacOSX/poweroftwo
+CND_ARTIFACT_NAME_Release=duff_in_love
+CND_ARTIFACT_PATH_Release=dist/Release/GNU-MacOSX/duff_in_love
 CND_PACKAGE_DIR_Release=dist/Release/GNU-MacOSX/package
-CND_PACKAGE_NAME_Release=poweroftwo.tar
-CND_PACKAGE_PATH_Release=dist/Release/GNU-MacOSX/package/poweroftwo.tar
+CND_PACKAGE_NAME_Release=duffinlove.tar
+CND_PACKAGE_PATH_Release=dist/Release/GNU-MacOSX/package/duffinlove.tar
 #
 # include compiler specific variables
 #

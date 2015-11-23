@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=PowerOfTwo
+PROJECTNAME=Duff_in_Love
 
 # Active Configuration
 DEFAULTCONF=Debug
