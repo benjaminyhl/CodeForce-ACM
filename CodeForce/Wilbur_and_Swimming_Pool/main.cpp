@@ -38,41 +38,37 @@
 //In the second sample there is only one vertex left and this is definitely not enough to uniquely define the area.
 
 #include <iostream>
-#include <vector>
-#include <cmath>
 using namespace std;
 
 
 int main(int argc, char** argv) {
     int n;
     int a,b;
-    vector<pair<int,int> > vec;
+    int xMax,yMax,xMin,yMin;
     while(!cin.fail()) {
         cin>>n;
         if(!cin.fail()) {
-            for(int i=0;i<n;i++) {
             cin>>a>>b;
-            vec.push_back(make_pair(a,b));
-            }
+            xMax=a;
+            xMin=a;
+            yMax=b;
+            yMin=b;
             if(n==1) {
                 cout<<(-1)<<endl;
-            } else if(n==2) {
-                if((vec[0].first!=vec[1].first)&&(vec[0].second!=vec[1].second)) {
-                    //get the area
-                    cout<<abs(vec[0].second-vec[1].second)*abs(vec[0].first-vec[1].first)<<endl;
-                } else {
+            } else {
+                for(int i=0;i<n-1;i++) {
+                    cin>>a>>b;
+                    if(a>xMax) xMax=a;
+                    if(a<xMin) xMin=a;
+                    if(b>yMax) yMax=b;
+                    if(b<yMin) yMin=b;
+                }
+                if(xMax==xMin||yMax==yMin) {
                     cout<<(-1)<<endl;
-                }
-            } else if(n==3||n==4) {
-                if(vec[0].first==vec[1].first) {
-                    cout<<abs(vec[0].second-vec[1].second)*abs(vec[0].first-vec[2].first)<<endl;
-                } else if(vec[0].second==vec[1].second) {
-                    cout<<abs(vec[0].first-vec[1].first)*abs(vec[0].second-vec[2].second)<<endl;
                 } else {
-                    cout<<abs(vec[0].second-vec[1].second)*abs(vec[0].first-vec[1].first)<<endl;
+                    cout<<(xMax-xMin)*(yMax-yMin)<<endl;
                 }
-            } 
-            
+            }
         }
     }
     return 0;
