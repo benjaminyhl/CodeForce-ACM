@@ -11,64 +11,53 @@
 using namespace std;
 
 
-int main(int argc, char** argv) {
-    set< pair<long,long> > s;
-    set< pair<long,long> >::iterator it1;
-    set< pair<long,long> >::iterator it2;
-//    int n;
-//    long a,b;
-//    while(!cin.fail()) {
-//        cin>>n;
-//        if(!cin.fail()) {
-//            for(int i=0;i<n;i++) {
-//                cin>>a>>b;
-//                s.insert(make_pair(a,b));
-//            }
-//            
-//        }
-//    }
-//    
-//    it2=s.begin();
-//    ++it2;
-//    for(it1=s.begin();it2!=s.end();++it1,++it2) {
-//        cout<<"hello"<<endl;
-//        if((*it1).second>=(*it2).first) {
-//            s.erase(it2);
-//            --it1;
-//            --it2;
-//        }
-//    }
-//    cout<<s.size()<<endl;
-//    
-    s.insert(make_pair(0,8));
-    s.insert(make_pair(0,5));
-    s.insert(make_pair(3,7));
-    s.insert(make_pair(6,9));
-    for(it1=s.begin();it1!=s.end();++it1) {
-        cout<<(*it1).first<<"  "<<(*it1).second<<endl;
+int main(int argc, char** argv) {    
+    set< pair<long long,long long> > s;
+    set< pair<long long,long long> >::iterator it1;
+    set< pair<long long,long long> >::iterator it2;
+    int n;
+    long long a,b;
+    while(!cin.fail()) {
+        cin>>n;
+        if(!cin.fail()) {
+            for(int i=0;i<n;i++) {
+                cin>>a>>b;
+                s.insert(make_pair(a,b));
+            }
+        }
     }
-    it2=s.begin();
-    ++it2;
-    for(it1=s.begin();it2!=s.end();++it1) {
-        for(it2;it2!=s.end();++it2) {
+//    s.insert(make_pair(4,8));
+//    s.insert(make_pair(1,5));
+//    s.insert(make_pair(4,7));
+//    s.insert(make_pair(2,5));
+//    s.insert(make_pair(1,3));  
+//    s.insert(make_pair(6,8));
+    
+//    for(it1=s.begin();it1!=s.end();++it1) {
+//        cout<<(*it1).first<<"  "<<(*it1).second<<endl;
+//    }
+//    cout<<endl<<endl;
+
+    it1=s.begin();
+    while(it1!=s.end()) {
+        it2=it1;
+        ++it2;
+        while(it2!=s.end()) {
+            if((*it1).second>=(*it2).first) {
+                s.erase(it2++);
+            } else {
+                ++it2;
+            }
             
         }
-        if((*it1).second>=(*it2).first) {
-            s.erase(it2);
-            --it1;
-            --it2;
-        }
+        ++it1;
+        
     }
-    cout<<endl<<endl;
-//    for(it=s.begin();it!=s.end()--;++it) {
-//        if((*it).second<=(*(++it)).first) s.erase(it);
+//    for(it1=s.begin();it1!=s.end();++it1) {
+//        cout<<(*it1).first<<"  "<<(*it1).second<<endl;
 //    }
-    
-    
-    
-    for(it1=s.begin();it1!=s.end();++it1) {
-        cout<<(*it1).first<<"  "<<(*it1).second<<endl;
-    } 
+
+    cout<<s.size()<<endl;
     
     
     return 0;
